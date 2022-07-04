@@ -34,10 +34,10 @@ function getTop5Countries(myDict) {
     const top5 = Object
         .entries(myDict) // create Array of Arrays with [key, value]
         .sort(([, a],[, b]) => b-a) // sort by value, descending (b-a)
-        .slice(0, 5) // return only the first 3 elements of the intermediate result
-        .map(([n])=> n); // and map that to an array with only the name
+        .slice(0, 5); // return only the first 3 elements of the intermediate result
+        //.map(([n])=> n); // and map that to an array with only the name
 
-    console.log(top5);
+    //console.log(top5);
 
     return top5
 }
@@ -55,7 +55,11 @@ function drawRegionsMap() {
 
     // Change text in text box
     for (var i = 1; i <= 5; i++) {
-        document.getElementById("country" + i).innerHTML = myTopCountries[i-1];    
+        var nDotsText = "<span class='dot hvrClr2'></span> ";
+        var nDots = myTopCountries[i-1][1] > 5 ? 5 : myTopCountries[i-1][1];
+
+        nDotsText = nDotsText.repeat(nDots);
+        document.getElementById("country" + i).innerHTML = myTopCountries[i-1][0] + "  " + nDotsText; 
     }
     
     var options = { backgroundColor: '#f5f2f7',
