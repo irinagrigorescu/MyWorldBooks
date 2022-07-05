@@ -55,10 +55,11 @@ function drawRegionsMap() {
 
     // Change text in text box
     for (var i = 1; i <= 5; i++) {
-        var nDotsText = "<span class='dot hvrClr2'></span> ";
-        var nDots = myTopCountries[i-1][1] > 5 ? 5 : myTopCountries[i-1][1];
+        // var nDotsText = "<span class='dot hvrClr2'></span> ";
+        // var nDots = myTopCountries[i-1][1] > 5 ? 5 : myTopCountries[i-1][1];
+        // nDotsText = nDotsText.repeat(nDots);
 
-        nDotsText = nDotsText.repeat(nDots);
+        var nDotsText = myTopCountries[i-1][1];
         document.getElementById("country" + i).innerHTML = myTopCountries[i-1][0] + "  " + nDotsText; 
     }
     
