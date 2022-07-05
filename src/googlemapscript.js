@@ -34,7 +34,7 @@ function getTop5Countries(myDict) {
     const top5 = Object
         .entries(myDict) // create Array of Arrays with [key, value]
         .sort(([, a],[, b]) => b-a) // sort by value, descending (b-a)
-        .slice(0, 5); // return only the first 3 elements of the intermediate result
+        .slice(0, 10); // return only the first 3 elements of the intermediate result
         //.map(([n])=> n); // and map that to an array with only the name
 
     //console.log(top5);
