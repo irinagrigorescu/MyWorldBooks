@@ -1,4 +1,10 @@
 var myBooks = [{
+    'author': 'Khaled Hosseini',
+    'country': 'Afghanistan',
+    'title': 'A Thousand Splendid Suns',
+    'year': 'na'
+},
+{
     'author': 'Selma Lagerlöf',
     'country': 'Sweden',
     'title': 'The Wonderful Adventures of Nils',
